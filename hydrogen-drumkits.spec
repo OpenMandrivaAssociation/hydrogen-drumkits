@@ -11,6 +11,7 @@ Group:		Sound
 URL:		http://www.hydrogen-music.org
 Source0:	http://ftp.de.debian.org/debian/pool/main/h/hydrogen-drumkits/%{name}_%{version}.orig.tar.gz
 Source1:	Makefile.hydrogen-drumkits
+BuildRoot:	%_tmppath/%{name}-buildroot
 
 %description
 Hydrogen is an advanced drum machine for GNU/Linux. It's main goal is to bring
