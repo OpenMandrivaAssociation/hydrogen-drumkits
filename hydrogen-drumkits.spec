@@ -1,6 +1,6 @@
 %define name    hydrogen-drumkits
 %define version 0.9.3.20070703
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary:	Extra drum kits for the Hydrogen drum machine
 Name:           %{name}
