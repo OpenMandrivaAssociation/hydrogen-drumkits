@@ -1,0 +1,54 @@
+#!/usr/bin/make -f
+# debian/rules for hydrogen-drumkits by Free Ekanayaka
+# GNU copyright 2006
+# based on a sample file 
+# GNU copyright 2002 by Bill Allombert
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+KITS_DIR=/home/adamw/rpm/tmp/hydrogen-drumkits-0.9.3.20070703-1mdv2008.1-buildroot/usr/share/hydrogen/data/drumkits
+SONG_DIR=/home/adamw/rpm/tmp/hydrogen-drumkits-0.9.3.20070703-1mdv2008.1-buildroot/usr/share/hydrogen/data/demo_songs
+
+BROKEN_SONGS=\
+	3355606demo.h2song\
+	EasternHop-1_demo.h2song\
+	"HipHop-1_demo1.h2song"\
+	"HipHop-1_demo2.h2song"\
+	"HipHop-2 demo1.h2song"\
+	"HipHop-2 demo2.h2song"\
+	Synthie-1.demo1.h2song\
+	TD7.h2song\
+	Techno-1demo1.h2song\
+	TR808909demo1.h2song\
+	rullada.h2song tipododiciottavi.h2song
+
+unpack:
+	mkdir -p $(KITS_DIR)
+	mkdir -p $(SONG_DIR)
+	mkdir -p tmp
+	@for i in drumkits/*.tar.gz; do \
+		echo "Extracting kit $$i"; \
+		tar zxf $$i -C tmp; \
+	done
+	@for i in drumkits/*.zip; do \
+		echo "Extracting kit $$i"; \
+		unzip $$i -d tmp > /dev/null; \
+	done
+	@for i in drumkits/*.h2drumkit; do \
+		echo "Extracting kit $$i"; \
+		cp $$i tmp; \
+	done
+	@for i in $$(find tmp/ -name "*.h2drumkit"); do \
+		echo "Installing kit $$i"; \
+		tar xfz $$i -C $(KITS_DIR); \
+	done
+	find tmp/ -name "*.h2song" | while read file; do \
+		echo "Installing song $$file"; \
+		cp "$$file" $(SONG_DIR) ; \
+	done
+	for i in $(BROKEN_SONGS); do \
+		echo "Removing broken song $$i"; \
+		rm "$(SONG_DIR)/$$i"; \
+	done
+

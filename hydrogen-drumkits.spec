@@ -38,3 +38,27 @@ chmod 0755 %{buildroot}%{_datadir}/hydrogen/data/drumkits/*
 %{_datadir}/hydrogen/data/drumkits/*
 %{_datadir}/hydrogen/data/demo_songs/*
 
+
+
+%changelog
+* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 0.9.3.20070703-5mdv2011.0
++ Revision: 619493
+- the mass rebuild of 2010.0 packages
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.9.3.20070703-4mdv2010.0
++ Revision: 429482
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.9.3.20070703-3mdv2009.0
++ Revision: 247130
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Wed Oct 17 2007 Adam Williamson <awilliamson@mandriva.org> 0.9.3.20070703-1mdv2008.1
++ Revision: 99479
+- import hydrogen-drumkits
+
+
