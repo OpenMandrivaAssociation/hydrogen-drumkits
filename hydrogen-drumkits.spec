@@ -1,7 +1,7 @@
 Summary:	Extra drum kits for the Hydrogen drum machine
 Name:		hydrogen-drumkits
 Version:	0.9.3.20070703
-Release:	6
+Release:	7
 License:	GPLv2+
 Group:		Sound
 Url:		http://www.hydrogen-music.org
