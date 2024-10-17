@@ -4,7 +4,7 @@ Version:	0.9.3.20070703
 Release:	7
 License:	GPLv2+
 Group:		Sound
-Url:		http://www.hydrogen-music.org
+Url:		https://www.hydrogen-music.org
 Source0:	http://ftp.de.debian.org/debian/pool/main/h/hydrogen-drumkits/%{name}_%{version}.orig.tar.gz
 Source1:	Makefile.hydrogen-drumkits
 BuildArch:	noarch
