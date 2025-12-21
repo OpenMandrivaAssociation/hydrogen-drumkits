@@ -9,6 +9,7 @@ Source0:	http://ftp.de.debian.org/debian/pool/main/h/hydrogen-drumkits/%{name}_%
 Source1:	Makefile.hydrogen-drumkits
 BuildArch:	noarch
 
+BuildRequires:	make
 %description
 Hydrogen is an advanced drum machine for GNU/Linux. It's main goal is to bring
 professional yet simple and intuitive pattern-based drum programming.
